@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.bannerContainer{
+background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  z-index: 1;
+}
+
+
+
+
+
