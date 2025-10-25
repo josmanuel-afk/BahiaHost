@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# 🏖️ BahiaHost - Sistema de Gestión Hotelera
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**BahiaHost** es una aplicación web moderna para la gestión de un hotel.  
+Permite administrar habitaciones, huéspedes, reservas, servicios y espacios recreativos de manera ágil e intuitiva.  
+El proyecto está desarrollado como una **SPA (Single Page Application)** utilizando **React + Material UI**, con datos mockeados para simular el comportamiento real del sistema.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características principales
 
-## React Compiler
+- 🏨 **Gestión de habitaciones**: visualización y administración de los diferentes tipos de habitaciones.
+- 👥 **Registro de huéspedes**: permite agregar, editar o visualizar huéspedes registrados.
+- 📅 **Reservas**: interfaz para la gestión de reservas de habitaciones, spa o gimnasio.
+- 💆 **Servicios adicionales**: visualización de servicios disponibles (spa, gimnasio, restaurante, etc.).
+- 📊 **Panel de recepción (Dashboard)**: vista para el personal del hotel, con reportes y actividades recientes.
+- 🎨 **UI 100% estilizada con Material UI (MUI)** siguiendo buenas prácticas de UX.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧱 Tecnologías utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tecnología | Descripción |
+|-------------|--------------|
+| **React + Vite** | Framework principal para el desarrollo del frontend. |
+| **TypeScript** | Mejora la legibilidad y mantenimiento del código. |
+| **Material UI (MUI)** | Librería para la creación de interfaces modernas y profesionales. |
+| **React Router DOM** | Control de rutas y navegación interna del SPA. |
+| **ESLint + Prettier** | Herramientas para mantener código limpio y consistente. |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
